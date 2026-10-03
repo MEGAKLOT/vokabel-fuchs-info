@@ -1,0 +1,46 @@
+@import url("fonts/fonts.css");
+/* Layout: eine ruhige Textspalte vor der Graffiti-Wand der App; Inhalte als Sticker. */
+:root {
+  --wall: #D8D4CC; --card: #FFFFFF; --ink: #151515; --muted: #5A5753; --edge: #151515;
+  --fox: #FF7A1A; --pink: #FF2E88; --cyan: #00B4D8; --yellow: #FFD21F; --logo-sh: #151515;
+  --font-tag: "Sedgwick Ave Display", "Permanent Marker", cursive;
+  --font-head: "Bungee", "Arial Black", Impact, sans-serif;
+  --font-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --wall: #1C1C21; --card: #2A2A31; --ink: #F3F1EC; --muted: #B3B0AA; --edge: #050505; --logo-sh: #F3F1EC; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --wall: #1C1C21; --card: #2A2A31; --ink: #F3F1EC; --muted: #B3B0AA; --edge: #050505; --logo-sh: #F3F1EC; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { overflow-wrap: break-word;
+  margin: 0; background: var(--wall); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55;
+  background-image: linear-gradient(var(--wall) 0 0), repeating-linear-gradient(0deg, transparent 0 30px, rgba(0,0,0,.06) 30px 32px);
+  background-blend-mode: normal;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 2rem 16px 3rem; display: flex; flex-direction: column; gap: 1.2rem; }
+header { display: flex; align-items: center; gap: 1rem; }
+header img { width: 84px; height: 84px; border-radius: 20px; border: 3px solid var(--edge); box-shadow: 4px 4px 0 var(--edge); }
+.logo { margin: 0; line-height: .95; transform: rotate(-3deg); }
+.logo a { color: inherit; text-decoration: none; }
+.logo .l1 { display: block; font-family: var(--font-tag); font-size: 2.6rem; color: #FFFFFF; -webkit-text-stroke: 2.5px #151515; paint-order: stroke fill; text-shadow: 3px 3px 0 var(--pink), 5px 5px 0 var(--logo-sh); }
+.logo .l2 { display: block; font-family: var(--font-head); font-size: 2.1rem; color: var(--fox); -webkit-text-stroke: 2px #151515; paint-order: stroke fill; text-shadow: 3px 3px 0 var(--cyan), 5px 5px 0 var(--logo-sh); padding-left: .3em; }
+nav { display: flex; flex-wrap: wrap; gap: .6rem; }
+nav a { font-family: var(--font-head); font-size: .9rem; color: var(--ink); text-decoration: none; padding: .35rem .8rem; background: var(--card); border: 2.5px solid var(--edge); border-radius: 10px; box-shadow: 3px 3px 0 var(--edge); }
+nav a[aria-current="page"] { background: var(--yellow); color: #151515; }
+.card { background: var(--card); border: 3px solid var(--edge); border-radius: 14px; box-shadow: 5px 5px 0 var(--edge); padding: 1.3rem 1.4rem; }
+.card > :first-child { margin-top: 0; } .card > :last-child { margin-bottom: 0; }
+h1 { font-family: var(--font-head); font-weight: 400; font-size: clamp(1.2rem, 5.5vw, 1.6rem); overflow-wrap: break-word; hyphens: auto; line-height: 1.2; margin: 0 0 .6rem; text-wrap: balance; }
+h2 { font-family: var(--font-head); font-weight: 400; font-size: 1.15rem; margin: 1.6rem 0 .4rem; }
+p, li { max-width: 65ch; }
+a { color: inherit; text-decoration-thickness: 2px; text-decoration-color: var(--pink); text-underline-offset: 3px; }
+.tape { display: inline-block; align-self: flex-start; padding: .3rem .8rem; background: var(--yellow); color: #151515; font-family: var(--font-head); transform: rotate(-2deg); }
+.muted { color: var(--muted); }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.table-wrap { overflow-x: auto; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 2px dashed rgba(127,127,127,.35); vertical-align: top; }
+th { font-family: var(--font-head); font-weight: 400; font-size: .85rem; }
+ul.facts { list-style: none; padding: 0; display: grid; gap: .5rem; }
+ul.facts li { padding-left: 1.8rem; position: relative; }
+ul.facts li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 1.3rem; height: 1.3rem; display: grid; place-items: center; background: #22B14C; color: #151515; border: 2px solid var(--edge); border-radius: 6px; font-weight: 900; font-size: .8rem; }
+footer { font-size: .85rem; color: var(--muted); }
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
