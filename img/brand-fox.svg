@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="200 150 624 730">
+  <polygon points="238,170 452,372 300,476" fill="#FF8E3C"/>
+  <polygon points="786,170 572,372 724,476" fill="#E8611A"/>
+  <polygon points="296,272 382,352 326,398" fill="#3B1F6E"/>
+  <polygon points="728,272 642,352 698,398" fill="#2C165A"/>
+  <polygon points="512,318 222,470 512,598" fill="#FF8A2B"/>
+  <polygon points="512,318 802,470 512,598" fill="#EE6A1C"/>
+  <polygon points="222,470 512,598 392,620" fill="#F47A22"/>
+  <polygon points="802,470 512,598 632,620" fill="#D9560F"/>
+  <polygon points="222,470 392,620 512,862" fill="#FFF6EC"/>
+  <polygon points="802,470 632,620 512,862" fill="#EADBCB"/>
+  <polygon points="392,620 512,598 512,862" fill="#FFE7D2"/>
+  <polygon points="632,620 512,598 512,862" fill="#E0CDBA"/>
+  <polygon points="324,512 438,540 350,566" fill="#1A1033"/>
+  <polygon points="700,512 586,540 674,566" fill="#1A1033"/>
+  <polygon points="466,790 558,790 512,862" fill="#1A1033"/>
+</svg>

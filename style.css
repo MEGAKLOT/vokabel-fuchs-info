@@ -19,11 +19,11 @@ body { overflow-wrap: break-word;
 }
 .wrap { max-width: 720px; margin: 0 auto; padding: 2rem 16px 3rem; display: flex; flex-direction: column; gap: 1.2rem; }
 header { display: flex; align-items: center; gap: 1rem; }
-header img { width: 84px; height: 84px; border-radius: 20px; border: 3px solid var(--edge); box-shadow: 4px 4px 0 var(--edge); }
-.logo { margin: 0; line-height: .95; transform: rotate(-3deg); }
-.logo a { color: inherit; text-decoration: none; }
-.logo .l1 { display: block; font-family: var(--font-tag); font-size: 2.6rem; color: #FFFFFF; -webkit-text-stroke: 2.5px #151515; paint-order: stroke fill; text-shadow: 3px 3px 0 var(--pink), 5px 5px 0 var(--logo-sh); }
-.logo .l2 { display: block; font-family: var(--font-head); font-size: 2.1rem; color: var(--fox); -webkit-text-stroke: 2px #151515; paint-order: stroke fill; text-shadow: 3px 3px 0 var(--cyan), 5px 5px 0 var(--logo-sh); padding-left: .3em; }
+header img { width: 76px; height: auto; filter: drop-shadow(0 6px 10px rgba(0,0,0,.25)); }
+.logo { margin: 0; display: flex; flex-direction: column; line-height: 1; }
+.logo a { color: inherit; text-decoration: none; display: flex; flex-direction: column; }
+.logo .l1 { font-family: "Rubik Mono One", var(--font-head); font-size: 1.15rem; letter-spacing: .08em; color: var(--ink); }
+.logo .l2 { font-family: "Rubik Mono One", var(--font-head); font-size: 2rem; background: linear-gradient(90deg, #FF8E3C, #FF4F9A); -webkit-background-clip: text; background-clip: text; color: transparent; }
 nav { display: flex; flex-wrap: wrap; gap: .6rem; }
 nav a { font-family: var(--font-head); font-size: .9rem; color: var(--ink); text-decoration: none; padding: .35rem .8rem; background: var(--card); border: 2.5px solid var(--edge); border-radius: 10px; box-shadow: 3px 3px 0 var(--edge); }
 nav a[aria-current="page"] { background: var(--yellow); color: #151515; }
